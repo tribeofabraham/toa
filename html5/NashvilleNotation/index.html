@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ragamuffin Hall Nashville Notation Wheel</title>
+       <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">--> 
+    <!-- Allow web app to be run in full-screen mode. -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+
+    <!-- Make the app title different than the page title. -->
+    <meta name="apple-mobile-web-app-title" content="Ragamuffin Hall Nashville Notation">
+
+    <!-- Configure the status bar. -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-transparent">
+
+    <!-- Set the viewport. -->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">-->
+
+    <script src="js/jquery-3.6.1.min.js"></script>
+    <script src="js/nn.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/nn.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css">
+    <link rel="stylesheet" type="text/css" href="css/colors.css">
+</head>
+
+<body>
+    <div id="wrapper" role="main">
+        <div class="circle">
+            <div class="wheelBack"></div>
+            <img id="numbers" class="ring" src="img/nnInner.svg" />
+            <img id="keys" class="ring" src="img/nnOuter.svg" />
+
+        </div>
+        <div class="chords">
+            <div id="progression">
+                <div id="selectProg1" class="dialog bottom">
+                    <select class="chordSelect">
+                        <option>I</option>
+                        <option>II</option>
+                        <option>III</option>
+                        <option>IV</option>
+                        <option>V</option>
+                        <option>VI</option>
+                        <option>VII</option>
+                    </select>
+                    <select class="modSelect">
+                        <option></option>
+                        <option>m</option>
+                        <option>7</option>
+            
+                    </select>
+                    <div class="chordChart">
+                    </div>
+                    <div class="scales">
+                        <div class="note"></div>
+                    </div>
+                    <div class="pianoChartBack"></div>
+                    <div class="pianoChart">
+                      
+                    </div>
+                </div>
+                <div id="selectProg2" class="dialog bottom">
+                    <select class="chordSelect">
+                        <option>I</option>
+                        <option>II</option>
+                        <option>III</option>
+                        <option>IV</option>
+                        <option>V</option>
+                        <option>VI</option>
+                        <option>VII</option>
+                    </select>
+                    <select class="modSelect">
+                        <option></option>
+                        <option>m</option>
+                        <option>7</option>
+               
+                    </select>
+                    <div class="chordChart">
+                    </div>
+                      <div class="scales">
+                    </div>
+                    <div class="pianoChartBack"></div>
+                    <div class="pianoChart">
+                  
+                    </div>
+                </div>
+                <div id="selectProg3" class="dialog bottom">
+                    <select class="chordSelect">
+                        <option>I</option>
+                        <option>II</option>
+                        <option>III</option>
+                        <option>IV</option>
+                        <option>V</option>
+                        <option>VI</option>
+                        <option>VII</option>
+                    </select>
+                    <select class="modSelect">
+                       <option></option>
+                        <option>m</option>
+                        <option>7</option>
+                 
+                    </select>
+                    <div class="chordChart">
+                    </div>
+                      <div class="scales">
+                    </div>
+                    <div class="pianoChartBack"></div>
+                    <div class="pianoChart">
+                  
+                    </div>
+                </div>
+                <div id="selectProg4" class="dialog bottom">
+                    <select class="chordSelect">
+                        <option>I</option>
+                        <option>II</option>
+                        <option>III</option>
+                        <option>IV</option>
+                        <option>V</option>
+                        <option>VI</option>
+                        <option>VII</option>
+                    </select>
+                    <select class="modSelect">
+                        <option></option>
+                        <option>m</option>
+                        <option>7</option>
+                  
+                    </select>
+                    <div class="chordChart">
+                    </div>
+                      <div class="scales">
+                    </div>
+                    <div class="pianoChartBack"></div>
+                    <div class="pianoChart">
+                
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div id="selectKey" class="">
+            <h1 class="keyTxt">KEY</h1>
+            <select tabindex="1">
+                <option>C</option>
+                <option>C#/Db</option>
+                <option>D</option>
+                <option>D#/Eb</option>
+                <option>E</option>
+                <option>F</option>
+                <option>F#/Gb</option>
+                <option>G</option>
+                <option>G#/Ab</option>
+                <option>A</option>
+                <option>A#/Bb</option>
+                <option>B</option>
+            </select>
+            <h1 class="transposeTxt">TRANSPOSE</h1>
+            <div id="trans">0</div>
+            <div id="tranDown" class="tranBtn up" tabindex="0"></div>
+            <div id="tranUp" class="tranBtn down" tabindex="0"></div>
+        </div>
+
+
+    </div>
+</body>
+
+</html>

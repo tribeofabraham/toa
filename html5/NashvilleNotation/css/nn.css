@@ -1,0 +1,452 @@
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .8);
+    user-select: none;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'BodyText';
+    font-size: 14px;
+}
+
+#wrapper {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+    height: 44em;
+    width: 36em;
+    font-size: 1.2em;
+    top: 2em;
+
+}
+
+.circle {
+    height: 18em;
+    width: 18em;
+    display: inline-block;
+    float: left;
+    position: relative;
+}
+
+
+
+.chords {
+    float: left;
+    display: inline-block;
+    height: 40em;
+    width: 50em;
+    position: relative;
+    font-size: .32em;
+    top:5em;
+    left:-2em;
+}
+
+.chords #progression {
+    font-size: 1.3em;
+    top:-6em;
+    left: 0;
+    width: 50em;
+    height: 40em;
+
+}
+
+@media (orientation: portrait) {
+
+    .circle {
+        height: 24em;
+        width: 36em;
+        display: inline-block;
+        float: left;
+        position: relative;
+    }
+
+    #wrapper .chords {
+        float: left;
+        display: inline-block;
+        height: 40em;
+        width: 90em;
+        position: relative;
+        font-size: .34em;
+        left:8em;
+        top:-2em;
+    }
+
+    .chords #progression {
+        top:-2em;
+        font-size: 1.5em;
+        width: 60em;
+        left:1em;
+
+    }
+
+    .circle img {
+        top: -3.8em;
+        height: 30em;
+        width: 30em;
+        left: 3em;
+    }
+
+    #progression .dialog {
+        width: 45em;
+        height: 6em;
+        font-size: 2em;
+    }
+
+
+    /*Transpose in MQ*/
+
+    #selectKey #trans {
+        position: absolute;
+        left: 24.8em;
+        /*top: .78em;*/
+        top: .15em;
+        font-size: 1.2em;
+        text-align: center;
+        height: 1.14em;
+        width: 1.8em;
+        border-radius: .14em;
+        line-height: 1.2em;
+   
+
+    }
+
+    #selectKey h1 {
+        position: absolute;
+        top: 3.3em;
+        color: white;
+        font-size: .5em;
+        line-height: 1em;
+    }
+
+    #selectKey h1.keyTxt {
+        left: 1em;
+    }
+
+    #wrapper #selectKey h1.transposeTxt {
+        left: 63em;
+        top: 3.4em;
+        width: auto;
+    }
+
+    #selectKey .tranBtn {
+        position: absolute;
+        top: .1em;
+        left: 34em;
+        background-color: var(--ghostBlack40);
+        cursor: pointer;
+        height: 1.5em;
+        width: 1.5em;
+        border-radius: .2em;
+        border: solid .05em var(--ghostWhite40);
+        background-image: url(../img/arrow.svg);
+        background-size: 60% auto;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+
+    #selectKey .tranBtn.down {
+        left: 32.4em;
+
+    }
+
+   #wrapper .wheelBack {
+   position: absolute;
+   left:7em;
+   top:.2em;
+   height:22em;
+   width:22em; 
+   background-color:var(--ghostWhite20);
+   border-radius:50%;
+}
+   
+    /*End Transpose in MQ*/
+}
+
+#branding {
+    position: absolute;
+    bottom: .4em;
+    width: 4em;
+    height: 4em;
+    right: 1em;
+    display: none;
+}
+
+.dialog {
+    position: absolute;
+    top: 0em;
+    left: 0em;
+    width: 31em;
+    height: 6em;
+    z-index: 1;
+    font-size: 1.6em;
+    
+}
+.scales {
+    position:absolute;
+   top:1.7em;
+   left:9.44em;
+   height:1em;
+   width:18em;
+   z-index: 0;
+
+   border-radius:.2em;
+    background-color:var(--ghostWhite40)
+}
+.note {
+    position:absolute;
+    top:0.1em;
+    height:.4em;
+    width:.4em;
+    background-color:white;
+    border-radius:50%;
+
+}
+.pianoChart, .pianoChartBack {
+   position:absolute;
+   top:1em;
+   left:2em;
+   height:6em;
+   width:45em;
+   z-index: 2;
+}
+.pianoChartBack {
+   z-index: 0;
+}
+
+
+.pianoChart div {
+    position:absolute;
+    top:0.6em;
+    height:3em;
+    width:1em;
+}
+
+.pianoChartBack div {
+    position:absolute;
+    top:0.6em;
+    height:3em;
+    width:1em;
+}
+.pianoChart div svg {
+    position:absolute;
+    top:0.6em;
+    height:3em;
+    width:1em;
+}
+.pianoChartBack div svg {
+    position:absolute;
+    top:0.6em;
+    height:3em;
+    width:1em;
+}
+
+.pianoChart img {
+    height:5em;
+    width:auto;
+}
+.pianoChartBack img {
+    height:5em;
+    width:auto;
+}
+
+#selectKey {
+    position: absolute;
+    right: 0;
+    left: 0;
+    height: 4em;
+    width: 100%
+}
+
+#selectKey select {
+    position: absolute;
+    top: .18em;
+    left: 0.2em;
+    height: 1.2em;
+    width: 4em;
+    appearance: none;
+    -webkit-appearance: none;
+    font-family: 'BodyText';
+    border-radius: .2em;
+    padding: 0;
+    margin: 0;
+    font-size: 1.2em;
+    line-height: 1.1em;
+    background-color: white;
+    color: black;
+    background-color: var(--ghostWhite80);
+    border: solid .05em var(--ghostBlack40);
+    cursor: pointer;
+}
+
+#selectKey option {
+    -webkit-appearance: none;
+    appearance: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: .6em;
+}
+
+#trans {
+    position: absolute;
+    left: 4em;
+    /*top: .78em;*/
+    top: 14.2em;
+    font-size: 1em;
+    text-align: center;
+    height: 1.14em;
+    width: 1.8em;
+    border-radius: .14em;
+    line-height: 1.2em;
+    color: black;
+    background-color: var(--ghostWhite80);
+    padding-right:.2em;
+
+}
+
+#selectKey h1 {
+    position: absolute;
+    top: 3.6em;
+    color: white;
+    font-size: .5em;
+    line-height: 1em;
+}
+
+#selectKey h1.keyTxt {
+    left: 1em;
+
+}
+
+#selectKey h1.transposeTxt {
+    left: 1.2em;
+    top: 26em;
+    width: auto;
+}
+
+.tranBtn {
+    position: absolute;
+    top: 14em;
+    left: 2.16em;
+    background-color: var(--ghostBlack40);
+
+    cursor: pointer;
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: .2em;
+    border: solid .05em var(--ghostWhite40);
+    background-image: url(../img/arrow.svg);
+    background-size: 60% auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.tranBtn:hover {
+    border: solid .05em var(--ghostWhite80);
+}
+
+
+.tranBtn.down {
+    left:0.4em;
+    transform: rotate(180deg);
+}
+
+.ring {
+    position: absolute;
+    top: -.4em;
+    left: 2em;
+    right: 0;
+    transition: .5s all ease;
+    display: inline-block;
+    
+    border-radius:50%;
+}
+.wheelBack {
+   position: absolute;
+   left:3.98em;
+   top:1.58em;
+   height:11.8em;
+   width:11.8em; 
+   background-color:var(--ghostWhite20);
+   border-radius:50%;
+   border:solid .14em black;
+   box-shadow: 0 .25em .5em rgba(0,0,0,.6);
+}
+#numbers {
+    position: absolute;
+    background-size: 30% 30%;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+#progression {
+    display: inline-block;
+    position: absolute;
+    float: left;
+    height: 11.4em;
+    width: 30.6em;
+}
+
+#progression select {
+    position: absolute;
+    left: 0;
+    top: 1.2em;
+    -webkit-appearance: none;
+    appearance: none;
+    text-align: center;
+    font-family: 'BodyText';
+    border-radius: .2em;
+    font-size: 1.8em;
+    background-color: black;
+    color: white;
+    width: 2em;
+    cursor: pointer;
+    z-index: 10;
+}
+
+#progression option {
+    font-size: .6em;
+
+}
+
+#progression select.modSelect {
+    font-size: 1em;
+    position: absolute;
+    left: 3.6em;
+    top: 1.4em;
+    padding: 0em;
+    height: 1.4em;
+    width: 1.4em;
+}
+
+#selectProg1 {
+    left: 0;
+}
+
+#selectProg2 {
+    left: 0em;
+    top: 6.4em;
+}
+
+#selectProg3 {
+    left: 0em;
+    top: 12.8em;
+}
+
+#selectProg4 {
+    left: 0em;
+    top: 19.2em;
+}
+
+#progression .chordChart {
+    position: absolute;
+    top: 0em;
+    left: 5.4em;
+    height: 3em;
+    width: 2.3em;
+    border-radius: .4em;
+    padding: .2em;
+}
