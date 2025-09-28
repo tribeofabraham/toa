@@ -206,12 +206,11 @@ function loadScales() {
         $('#selectProg' + (k + 1) + ' .scales').html(noteString);
     }
 
-    let startNote = 0.47;
+    let startNote = 0.4;
     let noteWidth = 0.4;
     for (k = 0; k < 4; k++) {
         for (i = 0; i < 37; i++) {
             $('#selectProg' + (k + 1) + ' .scales .n' + i).css('left', startNote + 'em');
-
             let lastKey = 0;
             if (i % 12 == 4 || i % 12 == 11) {
                 startNote += noteWidth * 2;
@@ -220,13 +219,13 @@ function loadScales() {
             }
 
         }
-        startNote = 0.47;
+        startNote = 0.4;
     }
 
 }
 
 function loadCharts() {
-    var svgFilePath = 'img/chordsReal.svg';
+    var svgFilePath = 'img/chords.svg';
     // Use $.get() to fetch the SVG content
     $.get(svgFilePath, function (data) {
         // 'data' will contain the SVG XML document
@@ -237,8 +236,8 @@ function loadCharts() {
         $('#selectProg3 .chordChart').html(svgContent);
         $('#selectProg4 .chordChart').html(svgContent);
     }, 'xml');
-    $("select.chordSelect").css('background-color', colors[0]);
-    $("select.modSelect").css('background-color', colors[0]);
+    $("select.chordSelect").css('background-color', 'white');
+    $("select.modSelect").css('background-color', 'white');
 
 
 }
@@ -251,7 +250,7 @@ function setCharts() {
 
     console.log(pg1);
 
-    $('#selectProg1 select.chordSelect').css('background-color', colors[pg1]);
+    $('#selectProg1 select.chordSelect').css('border-color', colors[pg1]);
     $('#selectProg2 select.chordSelect').css('background-color', colors[pg2]);
     $('#selectProg3 select.chordSelect').css('background-color', colors[pg3]);
     $('#selectProg4 select.chordSelect').css('background-color', colors[pg4]);

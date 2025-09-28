@@ -2,7 +2,7 @@ body {
     padding: 0;
     margin: 0;
     height: 100%;
-    background-color: rgba(0, 0, 0, .8);
+    background-color: rgba(0, 0, 0, .86);
     user-select: none;
     overflow: hidden;
     margin: 0;
@@ -17,10 +17,9 @@ body {
     display: inline-block;
     text-align: center;
     height: 44em;
-    width: 36em;
+    width: 40em;
     font-size: 1.2em;
     top: 2em;
-
 }
 
 .circle {
@@ -30,7 +29,11 @@ body {
     float: left;
     position: relative;
 }
+.circle img{
+    height:14em;
+    width:14em;
 
+}
 
 
 .chords {
@@ -41,13 +44,13 @@ body {
     position: relative;
     font-size: .32em;
     top:5em;
-    left:-2em;
+    left:-8em;
 }
 
 .chords #progression {
     font-size: 1.3em;
     top:-6em;
-    left: 0;
+    left: 1.8em;
     width: 50em;
     height: 40em;
 
@@ -56,10 +59,11 @@ body {
 @media (orientation: portrait) {
 
     .circle {
-        height: 24em;
+        height: 20em;
         width: 36em;
         display: inline-block;
         float: left;
+        left:2em;
         position: relative;
     }
 
@@ -70,23 +74,23 @@ body {
         width: 90em;
         position: relative;
         font-size: .34em;
-        left:8em;
+        left:0em;
         top:-2em;
     }
 
     .chords #progression {
-        top:-2em;
+        top:1em;
         font-size: 1.5em;
         width: 60em;
-        left:1em;
+    
 
     }
 
     .circle img {
-        top: -3.8em;
-        height: 30em;
-        width: 30em;
-        left: 3em;
+        top: 0em;
+        height: 20em;
+        width: 20em;
+        left: 8em;
     }
 
     #progression .dialog {
@@ -100,7 +104,7 @@ body {
 
     #selectKey #trans {
         position: absolute;
-        left: 24.8em;
+        left: 26.8em;
         /*top: .78em;*/
         top: .15em;
         font-size: 1.2em;
@@ -109,8 +113,6 @@ body {
         width: 1.8em;
         border-radius: .14em;
         line-height: 1.2em;
-   
-
     }
 
     #selectKey h1 {
@@ -119,14 +121,18 @@ body {
         color: white;
         font-size: .5em;
         line-height: 1em;
+        left:2em;
     }
 
-    #selectKey h1.keyTxt {
-        left: 1em;
+    #wrapper #selectKey h1.keyTxt {
+        left: 3em;
+    }
+    #wrapper #selectKey select {
+       /* left: 1em;*/
     }
 
     #wrapper #selectKey h1.transposeTxt {
-        left: 63em;
+        left: 65em;
         top: 3.4em;
         width: auto;
     }
@@ -134,7 +140,7 @@ body {
     #selectKey .tranBtn {
         position: absolute;
         top: .1em;
-        left: 34em;
+        left: 36em;
         background-color: var(--ghostBlack40);
         cursor: pointer;
         height: 1.5em;
@@ -149,11 +155,12 @@ body {
 
 
     #selectKey .tranBtn.down {
-        left: 32.4em;
+        left: 34.4em;
 
     }
 
    #wrapper .wheelBack {
+    display:none;
    position: absolute;
    left:7em;
    top:.2em;
@@ -180,21 +187,22 @@ body {
     top: 0em;
     left: 0em;
     width: 31em;
-    height: 6em;
+    height: em;
     z-index: 1;
     font-size: 1.6em;
     
 }
 .scales {
     position:absolute;
-   top:1.7em;
-   left:9.44em;
-   height:1em;
+   top:.9em;
+   left: 7.9em;
+   height:.6em;
    width:18em;
-   z-index: 0;
-
+   z-index: 10;
+font-size:1.3em;
    border-radius:.2em;
-    background-color:var(--ghostWhite40)
+    background-color:var(--ghostWhite40);
+    background-color:black;
 }
 .note {
     position:absolute;
@@ -207,11 +215,12 @@ body {
 }
 .pianoChart, .pianoChartBack {
    position:absolute;
-   top:1em;
-   left:2em;
+   top:.2em;
+   left:.4em;
    height:6em;
    width:45em;
    z-index: 2;
+   font-size:1.3em
 }
 .pianoChartBack {
    z-index: 0;
@@ -278,7 +287,7 @@ body {
     background-color: white;
     color: black;
     background-color: var(--ghostWhite80);
-    border: solid .05em var(--ghostBlack40);
+    border: solid .01em var(--ghostBlack40);
     cursor: pointer;
 }
 
@@ -356,15 +365,19 @@ body {
 
 .ring {
     position: absolute;
-    top: -.4em;
-    left: 2em;
+    top: .4em;
+    left: 2.6em;
     right: 0;
     transition: .5s all ease;
     display: inline-block;
-    
+ 
     border-radius:50%;
 }
+.ring img {
+    display:none;
+}
 .wheelBack {
+    display:none;
    position: absolute;
    left:3.98em;
    top:1.58em;
@@ -377,34 +390,38 @@ body {
 }
 #numbers {
     position: absolute;
-    background-size: 30% 30%;
+    background-size: 40% 40%;
     background-position: center center;
     background-repeat: no-repeat;
+    
 }
 
 #progression {
-    display: inline-block;
+    display: block;
     position: absolute;
-    float: left;
+
     height: 11.4em;
     width: 30.6em;
+    left:0em;
 }
 
 #progression select {
     position: absolute;
-    left: 0;
-    top: 1.2em;
+    left: .8em;
+    top: .96em;
     -webkit-appearance: none;
     appearance: none;
     text-align: center;
     font-family: 'BodyText';
     border-radius: .2em;
     font-size: 1.8em;
-    background-color: black;
-    color: white;
+    background-color: white;
+    color: black;
     width: 2em;
+    height: 2em;
     cursor: pointer;
     z-index: 10;
+    border:solid .1em white;
 }
 
 #progression option {
@@ -412,14 +429,19 @@ body {
 
 }
 
+#progression select option {
+   background-color:white;
+   color:black;
+
+}
+
 #progression select.modSelect {
-    font-size: 1em;
+    font-size: .8em;
     position: absolute;
-    left: 3.6em;
-    top: 1.4em;
-    padding: 0em;
-    height: 1.4em;
-    width: 1.4em;
+    left: 4.9em;
+    top: .8em;
+    padding: 0.1em;
+
 }
 
 #selectProg1 {
@@ -443,10 +465,10 @@ body {
 
 #progression .chordChart {
     position: absolute;
-    top: 0em;
-    left: 5.4em;
-    height: 3em;
-    width: 2.3em;
+    top: -.48em;
+    left: 5.6em;
+    height: 5.8em;
+    width: 3.9em;
     border-radius: .4em;
     padding: .2em;
 }
