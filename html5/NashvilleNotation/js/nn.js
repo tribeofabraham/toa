@@ -251,9 +251,9 @@ function setCharts() {
     console.log(pg1);
 
     $('#selectProg1 select.chordSelect').css('border-color', colors[pg1]);
-    $('#selectProg2 select.chordSelect').css('background-color', colors[pg2]);
-    $('#selectProg3 select.chordSelect').css('background-color', colors[pg3]);
-    $('#selectProg4 select.chordSelect').css('background-color', colors[pg4]);
+    $('#selectProg2 select.chordSelect').css('border-color', colors[pg2]);
+    $('#selectProg3 select.chordSelect').css('border-color', colors[pg3]);
+    $('#selectProg4 select.chordSelect').css('border-color', colors[pg4]);
 
     $('#selectProg1 select.modSelect').css('background-color', colors[pg1]);
     $('#selectProg2 select.modSelect').css('background-color', colors[pg2]);
