@@ -103,6 +103,8 @@ function setPiano() {
         $('.pianoChart .k' + k + ' svg path').css('fill', 'rgba(0,0,0,0)');
 
     }
+    $('.pianoChartBack .k36 svg #white1').css('display', 'none');
+    $('.pianoChart .k36 svg #white1').css('display', 'none');
     $('.pianoChartBack .k36 svg #white4').css('display', 'block');
     $('.pianoChart .k36 svg #white4').css('display', 'block');
 
@@ -237,7 +239,9 @@ function loadCharts() {
         $('#selectProg4 .chordChart').html(svgContent);
     }, 'xml');
     $("select.chordSelect").css('background-color', 'white');
-    $("select.modSelect").css('background-color', 'white');
+    $("select.modSelect").css('background-color', colors[0]);
+
+    $('select.chordSelect').css('background-color', colors[0]);
 
 
 }
@@ -250,10 +254,10 @@ function setCharts() {
 
     console.log(pg1);
 
-    $('#selectProg1 select.chordSelect').css('border-color', colors[pg1]);
-    $('#selectProg2 select.chordSelect').css('border-color', colors[pg2]);
-    $('#selectProg3 select.chordSelect').css('border-color', colors[pg3]);
-    $('#selectProg4 select.chordSelect').css('border-color', colors[pg4]);
+    $('#selectProg1 select.chordSelect').css('background-color', colors[pg1]);
+    $('#selectProg2 select.chordSelect').css('background-color', colors[pg2]);
+    $('#selectProg3 select.chordSelect').css('background-color', colors[pg3]);
+    $('#selectProg4 select.chordSelect').css('background-color', colors[pg4]);
 
     $('#selectProg1 select.modSelect').css('background-color', colors[pg1]);
     $('#selectProg2 select.modSelect').css('background-color', colors[pg2]);
